@@ -1,0 +1,76 @@
+zh-CN:
+  refinery:
+    plugins:
+      workflows:
+        title: Workflows
+        description: 提供联系方式表格来存放 workflows
+    workflows:
+      workflows:
+        new:
+          send: 发送邮件
+          privacy_policy: 我们重视您的隐私
+      admin:
+        workflows:
+          workflow:
+            delete_workflow: 永久删除 workflow
+            read_workflow: 阅读这个 workflow
+            said: 说
+            mark_as_spam: 标记为垃圾邮件
+            mark_as_ham:  移动到收件箱
+          submenu:
+            inbox: 收件箱
+            spam: 垃圾邮件
+            update_notified: 通知相关人员
+            edit_confirmation_email: 编辑确认邮件
+          index:
+            no_workflows: 您尚未收到任何 workflows
+          spam:
+            no_spam: 太棒了！一封垃圾邮件都没有～
+          show:
+            details: 详细
+            age: 岁
+            actions: 操作
+            back_to_all_workflows: 返回到全部 workflows
+            spam: 垃圾信息
+            spam_yes: 是
+            workflow: Workflow
+            to: 收件人(To)
+            from: 发件人(From)
+            click_to_email: 点击来发送
+            phone: 电话
+            date: 日期
+            message: 信息
+        settings:
+          notification_recipients_form:
+            workflow_settings_value_name: 发通知给
+            explanation: 每当有人联系您时， Refinery都会发邮件给您.
+            hint: 当有新的 workflow 被提交时， Refinery 会发邮件告知您。
+            example: "输入您的Email地址, 形如： jack@work.com, jill@office.com"
+          confirmation_email_form:
+            to: 收件人
+            from: 发件人
+            subject: 主题
+            click_to_edit_subject: 点击编辑主题
+            explanation: 当有人试图联系您时，Refinery 都会发邮件跟他（拥有workflow 的人）进行确认
+            below_edit_email_sent: 您可以在下面编辑邮件内容
+            the_customer_making_workflow:  建立 workflow 的顾客
+            message: 邮件
+            note: "提示: 您可以在希望出现对方姓名的地方，使用%name%"
+      mailer:
+        notification:
+          greeting: 你好
+          you_recieved_new_workflow: 您刚刚收到了一封新 workflow.
+          workflow_starts: --- workflow 开始---
+          workflow_ends: --- workflow 结束---
+          from: 发件人
+          email: Email
+          phone: 电话
+          message: 正文
+          closing_line: 此致，
+          ps_html:  注：所有您的workflows都会保存在"Workflows"里。这样您可以在任何时间查看它们。
+  activerecord:
+    models:
+      workflow: Workflow
+    attributes:
+      workflow:
+        email: Email

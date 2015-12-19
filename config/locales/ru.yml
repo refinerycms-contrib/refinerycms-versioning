@@ -1,0 +1,69 @@
+ru:
+  refinery:
+    plugins:
+      workflows:
+        title: Workflows
+    workflows:
+      workflows:
+        new:
+          header_message: "Упс. Возникла небольшая проблемка."
+          message: "Нужно исправить следующие ошибки:"
+          send: "Отправить сообщение"
+          privacy_policy: "Мы относимся с уважением к вашим личным данным"
+      admin:
+        workflows:
+          workflow:
+            read_workflow: "Прочитать запрос"
+            delete_workflow: "Вы уверены, что хотите удалить запрос от '%{name}'?"
+            said: "пишет"
+            mark_as_spam: "Пометить как спам"
+            mark_as_ham: "Переместить во Входящие"
+          submenu:
+            inbox: "Входящие"
+            spam: "Спам"
+            update_notified: Изменить получателей уведомлений
+            edit_confirmation_email: "Редактировать письмо-подтверждение"
+          index:
+            no_workflows: "Вы еще не получили ни одного запроса."
+          spam:
+            no_spam: "Ура! Вы не получили спам."
+          show:
+            details: "Подробности"
+            click_to_email: "Нажмите, чтобы отправить"
+            status: "Статус"
+            open: "Открыт"
+            closed: "Закрыт"
+            age: "Срок"
+            actions: "Действия"
+            back_to_all_workflows: "Назад ко всем запросам"
+            spam: "Спам"
+            spam_yes: 'да'
+            workflow: Workflow
+            title: Workflows
+        settings:
+          update:
+            updated: "'%{setting}' были успешно обновлены."
+          notification_recipients_form:
+            workflow_settings_value_name: "Отправить уведомления"
+            explanation: "Каждый раз, когда кто-то связывается с вами посредством вашего сайта, Refinery CMS отправляет уведомление на электронную почту."
+            hint: "Когда поступит новый запрос, Refinery CMS отправит вам уведомление на электронную почту."
+            example: "Введите адрес(а) электронной почты через запятую: anna@mail.ru, ivanov@yandex.ru"
+          confirmation_email_form:
+            to: "Кому"
+            from: "От"
+            subject: "Тема сообщения"
+            click_to_edit_subject: "Редактировать тему сообщения"
+            explanation: "Каждый раз, когда кто-то связывается с вами посредством вашего сайта, Refinery CMS отправляет ему письмо, подтверждающее принятие запроса."
+            below_edit_email_sent: Ниже вы можете отредактировать отсылаемое письмо
+            the_customer_making_workflow: "Клиент, делающий запрос"
+            message: "Сообщение"
+            note: "Примечание: поместите текст %name% там, где вы хотите, чтобы появилось имя клиента."
+          subject_form:
+            subject_value_name: "Тема сообщения"
+  activerecord:
+    models:
+      workflow: Workflow
+      setting: "Настройки запроса"
+    attributes:
+      workflow:
+        email: Email

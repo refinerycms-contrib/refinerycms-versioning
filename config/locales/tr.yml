@@ -1,0 +1,76 @@
+tr:
+  refinery:
+    plugins:
+      workflows:
+        title: Workflows
+        description: Iletisim formu ve kayitlarin temini workflows
+    workflows:
+      workflows:
+        new:
+          send: Mesaj Gonder
+          privacy_policy: Mahremiyetinize onem veriyoruz.
+      admin:
+        workflows:
+          workflow:
+            delete_workflow: Sonsuza dek workflow sil
+            read_workflow: Read the workflow
+            said: dedi
+            mark_as_spam: Spam olarak isaretle
+            mark_as_ham: Gelen kutusuna tasi
+          submenu:
+            inbox: Gelen Kutusu
+            spam: Istenmeyen E-posta
+            update_notified: Uyari alanlari guncelle
+            edit_confirmation_email: Dogrulama e-posta'sini duzenle
+          index:
+            no_workflows: Henuz  Herhangi bir  workflows almadiniz.
+          spam:
+            no_spam: Oley! Herhangi bir istenmeyen e-posta yok
+          show:
+            details: Detay
+            age: Yas
+            actions: Eylemler
+            back_to_all_workflows: Geri don tum workflows
+            spam: Istenmeyen E-posta
+            spam_yes: 'evet'
+            workflow: Workflow
+            to: Kime
+            from: Kimden
+            click_to_email: Bu adrese e-posta'layin
+            phone: Telefon
+            date: Tarih
+            message: Mesaj
+        settings:
+          notification_recipients_form:
+            workflow_settings_value_name: Bildirimleri gonderecegin  adres
+            explanation: Her kim olursa seninle web sitesi uzerinden iletisime gecen, Refinery yeni bir workflow  diye e-posta atar.
+            hint: Yeni Bir workflow teslim edildiginde, Refinery bir e-posta bildirisi yollayacak sana.
+            example: "Lutfen e-posta adres(ler)inizi giriniz. Ornek olarak: jack@work.com, jill@office.com gibi"
+          confirmation_email_form:
+            to: Kime
+            from: Kimden
+            subject: Baslik
+            click_to_edit_subject: Basligi degistirmek icin buraya tiklayiniz
+            explanation: Her kim olursa seninle web siten uzerinden iletisime gecen,Refinery yeni bir dogrulama postasi gonderir workflow yapan kisiye
+            below_edit_email_sent: Asagida gonderilen e-postayi duzenleyebilirsin.
+            the_customer_making_workflow: Musteri workflow yapiyor
+            message: Mesaj
+            note: "Not: metini hizala %name% nerede musterinizin e-posta adresi gibi gozukmesini istiyorsan"
+      mailer:
+        notification:
+          greeting: Selamlar
+          you_recieved_new_workflow: You just received a new workflow on your website.
+          workflow_starts: --- workflow starts ---
+          workflow_ends: --- workflow ends ---
+          from: Kimden
+          email: E-posta
+          phone: Telefon
+          message: Mesaj
+          closing_line: Saygilarimizla
+          ps_html: Senin butun workflows kayitli oldugu yer "Workflows" burasidir eger ileride kullanmak istersen
+  activerecord:
+    models:
+      workflow: Workflow
+    attributes:
+      workflow:
+        email: Email
