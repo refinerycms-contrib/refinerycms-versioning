@@ -1,0 +1,28 @@
+<h1>Bring back pages</h1>
+<table class='table'>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Deleted by</th>
+      <th>At</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pages.each do |page_version| %>
+      <%- page = page_version.reify %>
+      <tr>
+        <td><%= page.id %></td>
+        <td><%= page.title %></td>
+        <td><%#= page.content %></td>
+        <td><%#= find_version_author_name(document_version) %></td>
+        <td><%= page.created_at %></td>
+        <td><%= link_to 'Bringback', refinery.bringback_version_path(page_version), method: 'PATCH' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= link_to 'Back', edit_admin_pages_path %>

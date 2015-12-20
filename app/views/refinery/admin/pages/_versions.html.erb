@@ -1,0 +1,28 @@
+<h2><%= t('.previous_versions') %></h2>
+
+<table class='table'>
+  <thead>
+    <tr>
+      <th>Index</th>
+      <th>Date</th>
+      <th>Author</th>
+      <th>Event</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%- page.versions.reverse.each do |version| %>
+      <tr>
+        <td><%= version.index %></td>
+        <td><%= version.created_at %></td>
+        <td><%#= find_version_author_name(version) %></td>
+        <td><%= version.event.humanize %></td>
+        <td><%= link_to 'Diff', refinery.diff_admin_page_version_path(page, version) %></td>
+        <td><%= link_to 'Rollback', refinery.rollback_admin_page_version_path(page, version), method: 'PATCH' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,5 +1,6 @@
 require 'refinerycms-core'
 require 'paper_trail'
+require 'diffy'
 
 module Refinery
   module Versioning

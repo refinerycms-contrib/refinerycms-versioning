@@ -1,5 +1,5 @@
 Refinery::PagesController.class_eval do
-  def history
-    @versions = Refinery::PageVersion.order('created_at DESC')
+  def deleted
+    @documents = DocumentVersion.where(event: 'destroy')
   end
 end

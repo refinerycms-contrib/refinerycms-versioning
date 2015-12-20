@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gemspec
 
-git 'https://github.com/refinery/refinerycms.git', :branch => 'master' do
+git 'https://github.com/refinery/refinerycms.git', :branch => 'lock-sprockets-rails' do
   gem 'refinerycms'
 
   group :development, :test do
@@ -20,7 +20,7 @@ end
 
 platforms :ruby do
   gem 'sqlite3'
-  gem 'mysql2'
+  # gem 'mysql2'
   gem 'pg'
 end
 
