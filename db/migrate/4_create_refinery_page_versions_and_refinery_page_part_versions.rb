@@ -6,6 +6,7 @@ class CreateRefineryPageVersionsAndRefineryPagePartVersions < ActiveRecord::Migr
       t.string   :event,     :null => false
       t.string   :whodunnit
       t.text     :object
+      t.string   :locale
       t.datetime :created_at
     end
     add_index :refinery_page_versions, [:item_type, :item_id]
@@ -16,6 +17,7 @@ class CreateRefineryPageVersionsAndRefineryPagePartVersions < ActiveRecord::Migr
       t.string   :event,     :null => false
       t.string   :whodunnit
       t.text     :object
+      t.string   :locale
       t.datetime :created_at
     end
     add_index :refinery_page_part_versions, [:item_type, :item_id]

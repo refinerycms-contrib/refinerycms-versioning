@@ -12,7 +12,8 @@ Gem::Specification.new do |s|
   s.authors           = ['Brice Sanchez']
 
   # Runtime dependencies
-  s.add_dependency 'refinerycms-core',     '~> 3.0.0'
+  s.add_dependency 'refinerycms-core', '~> 3.0.0'
+  s.add_dependency 'refinerycms-pages', '~> 3.0.0'
   s.add_dependency 'paper_trail', '~> 4.0.0'
   s.add_dependency 'diffy', '~> 3.1.0'
   # s.add_dependency 'globalize-versioning', '~> 0.2.0'

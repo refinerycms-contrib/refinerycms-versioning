@@ -9,7 +9,9 @@
       </p>
       <p>
         <strong>Content:</strong>
-        <%#= diff(@version.reify.body, @page.body) %>
+        <%= @version.reify(:has_many => true).parts.first.body %>
+        <%= @page.parts.first.body %>
+        <%= diff(@version.reify(:has_many => true).parts.first.body, @page.parts.first.body) %>
       </p>
     </div>
     <p>

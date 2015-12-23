@@ -2,8 +2,8 @@ module Refinery
   class VersioningGenerator < Rails::Generators::Base
 
     def rake_db
+      # generate "paper_trail:install"
       rake "refinery_versioning:install:migrations"
-      generate "paper_trail:install"
     end
 
     def append_load_seed_data

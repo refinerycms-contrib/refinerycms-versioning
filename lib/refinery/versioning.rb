@@ -1,10 +1,12 @@
 require 'refinerycms-core'
+require 'refinerycms-pages'
 require 'paper_trail'
+require 'globalize-versioning'
 require 'diffy'
 
 module Refinery
   module Versioning
-    require 'refinery/versioning/engine'
+    require 'refinery/versioning/configuration'
 
     class << self
       def root
@@ -17,3 +19,5 @@ module Refinery
     end
   end
 end
+
+require 'refinery/versioning/engine'

@@ -11,17 +11,12 @@ module Refinery
           plugin.name = "refinery_versioning"
           plugin.hide_from_menu = true
           plugin.pathname = root
-
         end
       end
 
-      def self.activate
-        Dir.glob(File.join(File.dirname(__FILE__), '../../app/**/*_decorator*.rb')) do |c|
-          Rails.configuration.cache_classes ? require(c) : load(c)
-        end
+      config.to_prepare do
+        Decorators.register! ::Refinery::Versioning.root
       end
-
-      config.to_prepare &method(:activate).to_proc
 
       config.after_initialize do
         Refinery.register_extension(Refinery::Versioning)
